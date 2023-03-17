@@ -46,6 +46,7 @@ public class MantisSite {
     public ViewIssuesPage getViewIssuesPage() {
         return viewIssuesPage;
     }
+
     public BugActionGroupPage getBugActionGroupPage() {
         return bugActionGroupPage;
     }
