@@ -17,8 +17,7 @@ public class ViewIssuesPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "#buglist>tbody>tr:nth-child(1) span[class='lbl']")
-    //#buglist>tbody>tr:nth-child(1) span[class='lbl']
+    @FindBy(xpath = "//*//tr[1]/td[1]//*[@class='lbl']")
     private WebElement latestIssueCheckbox;
 
     @FindBy(xpath = "//*[@name='action']")
