@@ -32,7 +32,6 @@ public class ViewIssuesPage {
     @FindBy(xpath = "//*[@id='buglist']/tbody/tr[1]/td[11]")
     private WebElement lastIssueSummary;
 
-
     public void selectLatestIssue() {
         latestIssueCheckbox.click();
     }
