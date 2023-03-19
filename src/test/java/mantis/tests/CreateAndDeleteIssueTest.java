@@ -23,7 +23,7 @@ public class CreateAndDeleteIssueTest extends BaseTest {
         String testDescription = "description";
         mantisSite.getReportIssuePage().createIssue(testSummary, testDescription);
         Thread.sleep(2000);
-        String actualIssueSummary = mantisSite.getViewIssuesPage().checkLastIssueSummary();
+        String actualIssueSummary = mantisSite.getViewIssuesPage().getLatestIssueSummaryText();
 
         //Проверка, что новый issue появился на странице ViewIssues (по тексту описанию summary)
         softAssert.assertThat(testSummary).isEqualTo(actualIssueSummary);
@@ -39,7 +39,7 @@ public class CreateAndDeleteIssueTest extends BaseTest {
 
         mantisSite.getBugActionGroupPage().confirmDeleteIssues();
         Thread.sleep(2000);
-        String currentSummaryAfterDelete = mantisSite.getViewIssuesPage().checkLastIssueSummary();
+        String currentSummaryAfterDelete = mantisSite.getViewIssuesPage().getLatestIssueSummaryText();
 
         //Проверка, что верхняя строчка на странице ViewIssues не содержит описания summary последнего удаленного issue
         softAssert.assertThat(currentSummaryAfterDelete).isNotEqualTo(testSummary);

@@ -30,7 +30,7 @@ public class ViewIssuesPage {
     private WebElement okButton;
 
     @FindBy(xpath = "//*[@id='buglist']/tbody/tr[1]/td[11]")
-    private WebElement lastIssueSummary;
+    private WebElement latestIssueSummary;
 
     public void selectLatestIssue() {
         latestIssueCheckbox.click();
@@ -40,8 +40,8 @@ public class ViewIssuesPage {
         okButton.click();
     }
 
-    public String checkLastIssueSummary() {
-        return lastIssueSummary.getText();
+    public String getLatestIssueSummaryText() {
+        return latestIssueSummary.getText();
     }
 
     public WebElement getDropUpField() {
